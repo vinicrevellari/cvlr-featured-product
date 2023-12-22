@@ -10,10 +10,12 @@ composer require cvlr/featuredproduct
 
 Acesse Admin > Stores > Featured Product > Configuration:
 
-![image](https://github.com/vinicrevellari/featured-product/assets/154624465/b2bd7b28-bf77-4004-ab97-1a386929520b)
+![Captura de tela de 2023-12-22 19-02-11](https://github.com/vinicrevellari/cvlr-featured-product/assets/154624465/02adf1b0-3cd7-48ee-b014-5b2c6fc4a5a2)
 
 No primeiro campo é onde ativamos o módulo,
 
 No segundo, inserimos o SKU do produto que queremos em destaque.
 
-![image](https://github.com/vinicrevellari/featured-product/assets/154624465/985a2791-2044-4323-afc5-e037711ce6cb)
+![Captura de tela de 2023-12-22 19-02-22](https://github.com/vinicrevellari/cvlr-featured-product/assets/154624465/51cc6ea8-9fac-47e3-8f46-37ba141a12f3)
+
+![Captura de tela de 2023-12-22 19-02-43](https://github.com/vinicrevellari/cvlr-featured-product/assets/154624465/ea71c448-0d33-42b9-8ebf-f012a1b87731)
