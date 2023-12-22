@@ -1,0 +1,118 @@
+
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+    .featured {
+        &:hover {
+            text-decoration: unset;
+            .item {
+                box-shadow: 2px 2px 2px #e6e6e6;
+            }
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: solid 2px #e6e6e6;
+            border-radius: 4px;
+            padding: 5px 20px;
+            margin-bottom: 20px;
+            .col {
+                &.left {
+                    width: 40%;
+                    margin-right: 5%;
+                }
+                &.right {
+                width: 55%;
+                display: grid;
+                .product-name {
+                    font-size: 26px;
+                    font-weight: 600;
+                    color: #333;
+                    max-width: 90%;
+                    margin: 0 0 20px;
+                }
+                .cost {
+                    color: #7f858d;
+                    text-decoration: line-through;
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+                .price {
+                    color: #ff6500;
+                    font-size: 35px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+                .stock {
+                    background: #006bb4;
+                    color: #fff;
+                    border-radius: 2px;
+                    width: fit-content;
+                    padding: 5px 20px 5px 50px;
+                    font-size: 15px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    img {
+                        max-width: 30px;
+                        filter: invert(1);
+                        position: absolute;
+                        left: 10px;
+                    }
+                    span {
+                        font-size: 30px;
+                        font-weight: 900;
+                        margin: 0px 10px;
+                    }
+                }
+            }
+            }
+        }
+    }
+}
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .featured {
+        .item {
+            .col{
+                &.right {
+                .product-name {
+                    font-size: 18px;
+                    max-width: 100%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin: 0 0 10px;
+                    max-height: 82px;
+                }
+                .stock {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    width: 75%;
+                    justify-content: center;
+                    img {
+                        left: 60px;
+                    }
+                }
+                display: unset;
+                margin-top: 20px;
+                .price {
+                    font-size: 25px;
+                }
+            }
+            }
+            position: relative;
+            min-height: 240px;
+            align-items: flex-start;
+        }
+    }
+    }
+

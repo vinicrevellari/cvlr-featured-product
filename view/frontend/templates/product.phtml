@@ -1,0 +1,33 @@
+<?php
+/** @var \Cvlr\FeaturedProduct\Block\FeaturedProduct $block */
+
+$isEnabled = $block->getFeaturedProductEnabled();
+
+if ($isEnabled) {
+    $_product = $block->getFeaturedProduct();
+    $imageHelper = $this->helper('Magento\Catalog\Helper\Image');
+    $imageUrl = $imageHelper->init($_product, 'product_page_image_large')->getUrl();
+    ?>
+    <a class="featured" href="<?= $block->escapeUrl($_product->getProductUrl()) ?>">
+        <div class="item">
+            <div class="col left">
+                <img src="<?= $imageUrl ?>" alt="<?= $block->escapeHtml($_product->getName()) ?>">
+            </div>
+            <div class="col right">
+                <h2 class="product-name"><?= $_product->getName() ?></h2>
+
+                <?php if ($_product->getSpecialPrice() !== null && $_product->getSpecialPrice() < $_product->getPrice()): ?>
+                    <span class="old-price"><?= $block->escapeHtml('R$') ?><?= $block->getRegularPrice() ?></span>
+                <?php else: ?>
+                    <span class="cost"><?= $block->escapeHtml('R$') ?><?= $block->getCostPrice() ?></span>
+                    <span class="price"><?= $block->escapeHtml('R$') ?><?= $block->getSpecialPrice() ?></span>
+                <?php endif; ?>
+                <div class="stock">
+                    <img src='<?php echo $this->getViewFileUrl('Cvlr_FeaturedProduct::images/clock.png'); ?>'>
+                    <?= $block->escapeHtml('Restam') ?><span id="qty-available"><?= $block->getSalableQty() ?></span><?= $block->escapeHtml('Unid.') ?>
+                </div>
+
+            </div>
+        </div>
+    </a>
+<?php } ?>

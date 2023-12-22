@@ -1,0 +1,27 @@
+{
+    "name": "cvlr/featuredproduct",
+    "description": "Featured Product",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/vinicrevellari/cvlr-featured-product"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Cvlr\\FeaturedProduct\\": ""
+        }
+    }
+}
